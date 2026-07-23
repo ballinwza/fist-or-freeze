@@ -26,6 +26,7 @@ Repository นี้สร้างขึ้นมาเพื่อเรีย
 2. เปิดหน้า [Fist or Freeze](https://fist-or-freeze-quest.lovable.app) แล้วกดเริ่มเกม กรอกข้อมูล เพื่อทดลองเล่นได้เลย
 ![alt homepage](guide/homepage.png)
 
+3. อย่ากดเล่นเยอะเกินเดี๋ยว Token หมดจ้าใช้ของฟรี
 
 ## ✨ API Method
 Deploy API บน Render free plan (ไม่ได้เปิด service ตลอดเวลา) จำเป็นต้องเข้าไปเพื่อเปิด Service ก่อนใช้งานผ่าน Frontend
