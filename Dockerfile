@@ -1,5 +1,5 @@
 # --- Stage 1: Build dependencies ---
-FROM python:3.11-bookworm AS builder
+FROM python:3.11-alpine AS builder
 
 WORKDIR /app
 
@@ -11,7 +11,7 @@ COPY requirements.txt .
 RUN pip wheel --no-cache-dir --no-deps --wheel-dir /app/wheels -r requirements.txt
 
 # --- Stage 2: Final Runtime ---
-FROM python:3.12-bookworm
+FROM python:3.11-alpine
 
 WORKDIR /app
 
