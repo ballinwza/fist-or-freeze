@@ -1,5 +1,4 @@
 ![alt text](guide/fist-freeze-bg.png)
-Machine Learning Workshop
 
 ![FastAPI](https://img.shields.io/badge/fastapi-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 ![Gemini](https://img.shields.io/badge/gemini-8E75B2?style=for-the-badge&logo=googlegemini&logoColor=white)
