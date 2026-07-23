@@ -6,7 +6,7 @@ from models.quiz import QuestionModel, AnswerResponse
 
 logger = logging.getLogger(__name__)
 SESSIONS = {}
-BUFFER_SIZE=2
+BUFFER_SIZE=1
 
 class QuizService:
     def __init__(self):
@@ -28,9 +28,11 @@ class QuizService:
                 )
                 await queue.put(question)
                 logger.info(f"[Session {session_id}] Question added to buffer. Queue size: {queue.qsize()}")
+                await asyncio.sleep(2)
             except Exception as e:
                 logger.error(f"[Session {session_id}] Error generating background question: {e}")
-                await asyncio.sleep(1)
+                await asyncio.sleep(20)
+            
     
     async def start_new_game(self, category: str, difficulty: str):
         session_id = str(uuid.uuid4())

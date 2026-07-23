@@ -7,7 +7,7 @@ from google import genai
 from google.genai import types
 
 class LLMClient:
-    def __init__(self, model_name: str = "gemini-3.6-flash"):
+    def __init__(self, model_name: str = "gemini-3.5-flash"):
         # self.client = AsyncClient()
         
         api_key = get_google_token()
@@ -18,6 +18,8 @@ class LLMClient:
     async def generate_question(self, category: str, difficulty: str) -> QuestionModel:
         prompt = f"""
 คุณคือระบบสร้างคำถามในเกมทายปัญหา โดยใช้ภาษาไทยที่อ่านง่ายแบบเป็นกันเอง
+ห้ามสร้างคำถามซ้ำเด็ดขาด
+คำถามต้องมีความหลากหลาย
 สร้างคำถามโดยเกี่ยวข้องกับหัวข้อ {category}
 กำหนดความยากระดับความยากของคำถาม {difficulty}
 จำนวน 1 ข้อ ตอบกลับมาเป็น JSON เท่านั้นในโครงสร้างนี้:
@@ -33,7 +35,7 @@ INSTRUTOR
 -เป็นเพศชาย
 -ขี้เล่น
 -พูดเป็นกันเอง แต่สุภาพอ่อนน้อม
--ใช้คำพูดเหมือนอยู่ในยุคกลาง
+-ใช้คำพูดให้เข้ากับ Theme 2d pixel advanture game
     """
         
         # TODO: Ollama style
