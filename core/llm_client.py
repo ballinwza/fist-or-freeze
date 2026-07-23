@@ -7,7 +7,8 @@ from google import genai
 from google.genai import types
 
 class LLMClient:
-    def __init__(self, model_name: str = "gemini-3.5-flash"):
+    # TODO: ต้องคอยเปลี่ยน model ไม่มีเงินจ่าย T-T , gemini-3.6-flash/gemini-3.5-flash/ gemini-3.5-flash-lite
+    def __init__(self, model_name: str = "gemini-3.5-flash-lite"):
         # self.client = AsyncClient()
         
         api_key = get_google_token()
@@ -35,7 +36,6 @@ INSTRUTOR
 -เป็นเพศชาย
 -ขี้เล่น
 -พูดเป็นกันเอง แต่สุภาพอ่อนน้อม
--ใช้คำพูดให้เข้ากับ Theme 2d pixel advanture game
     """
         
         # TODO: Ollama style

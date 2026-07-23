@@ -12,7 +12,7 @@ Repository นี้สร้างขึ้นมาเพื่อเรีย
 ## 🛠️ Tech Stack
 
 - **Backend:** FastAPI
-- **LLM:** llama3.2, gemma3:4b, qwen3.5:9b, gemini-3.6-flash (ใช้จริงตัวนี้)
+- **LLM:** llama3.2, gemma3:4b, qwen3.5:9b, gemini-3.5-flash-lite (ใช้จริงตัวนี้)
 - **Tools & DevOps:** Docker, GitHub Actions, Pip-tools, Swagger, Render
 
 
